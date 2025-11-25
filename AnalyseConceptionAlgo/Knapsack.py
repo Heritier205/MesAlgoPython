@@ -1,8 +1,8 @@
 # ============================================================
 #  Programme : RESOLUTION PROBLEME DU SAC A DOS ( KNAPSACK ) 0/1
-#  Auteur    : Héritier ADAKANOU
+#  Auteur    : Héritier ADAKANOU , BEDEL Josué
 #  Date      : 25/11/2025
-#  Objet     : Il s'agit d'un programme qui resous le probleme du sac a dos (kmapsack)
+#  Objet     : Il s'agit d'un programme qui resous le probleme du sac a dos (KNAPSACK)
 #  Version   : 1.0
 #
 #  Entrées   : Oui
@@ -10,10 +10,6 @@
 #
 #  Remarques :
 # ============================================================
-
-
-
-
 
 def KnapsackBinaire(W, w, v, n):
     DP = [[0 for i in range(W+1)] for i in range(n+1)]
