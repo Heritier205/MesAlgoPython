@@ -7,7 +7,7 @@ from newton import newton
 
 choice= ''
 
-while choice != "Y" and choice != "y" :
+while choice != "N" or choice != "n" :
     pas = float(input("\nEntrez le pas : "))
     print("""\n\n           
                 Les methodes de resolution sont  \n
@@ -47,4 +47,5 @@ while choice != "Y" and choice != "y" :
 
             x0 = float(input("\nEntrez un x0 : "))
             print(newton(x0, pas))
-    choice = input("\nVoulez-vous essayer  (y/N) ? ")
+    choice = input("\nVoulez-vous essayer  (y/n) ? ")
+
