@@ -1,4 +1,4 @@
-# Groupe d'etudiant en Infortique 
+# Groupe d'etudiant en Informatique 
 
 ## 👥 À propos du groupe
 
