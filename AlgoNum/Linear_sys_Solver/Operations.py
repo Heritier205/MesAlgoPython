@@ -96,7 +96,7 @@ def pivot_partiel(mat,niveau):
     for i in range(niveau, len(mat)):
         if abs(mat[i][niveau]) > abs(mat[max_coef][niveau]) and tt_inconnue(mat[i][niveau:]):
             max_coef = i
-            print(f"Le maxCoef = {i}")
+            # print(f"Le maxCoef = {i}")
     mat[niveau], mat[max_coef] = mat[max_coef], mat[niveau]
     return mat
 

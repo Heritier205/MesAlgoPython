@@ -1,12 +1,11 @@
 from fractions import Fraction
 
 from Operations import *
-
-# m1 = [
-#     [2, 1, -1, 8],
-#     [4, -6, 0, -2],
-#     [-2, 7, 2, 9]
-# ]
+m2 = [
+    [0, 2, 9, 1],
+    [1, -1, 2, 0],
+    [3, 2, -1, 4]
+]
 m1 = [
     [1, 1, 2, 9],
     [2, 4, -3, 1],
@@ -16,7 +15,7 @@ m1 = [
 
 def gauss(mat):
     if not est_carre([row[:-1] for row in mat]) :
-        return "La matrice des coeficients n'est pas carée. Gauss Impossible"
+        return "La matrice des coefficients n'est pas carée. Gauss Impossible"
     else :
         mat = pivot_partiel(mat,0)
         n = len(mat)
@@ -27,23 +26,24 @@ def gauss(mat):
                 for j in range(n+1): # on boucle sur chaque colones y compris les colones solution
                     mat[k][j] -= fact*mat[i][j] # multiplication et remplissage des colones
             mat = pivot_partiel(mat, i+1) # On refait le pivot à chaque étape
-    return list(mat)
+    show(mat)
+    return reduct(list(mat))
 
 
 
 
 def reduct(mat):
-    show(mat)
     s_mat = []
     while len(mat) > 0:
-        s_mat.append(round(mat[-1][-1]/mat[-1][-2]))
+        s_mat.append(mat[-1][-1]/mat[-1][-2])
+
         mat = mat[:-1]
         for i in range(len(mat)):
             mat[i][-1] -= mat[i][-2]*s_mat[-1]
         mat = [row[:-2]+row[-1:] for row in mat]
-    return reversed(s_mat)
+    return s_mat
 
-show(reduct(gauss(m1)))
+# show(gauss(m2))
 
 
 
