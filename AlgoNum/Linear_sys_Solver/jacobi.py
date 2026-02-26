@@ -37,6 +37,6 @@ def jacobi(mat, x0=None, tol=1e-10, max_iter=1000):
 
         show(x_new)
 
-    return "Jacobi n'a pas convergé après {} itérations".format(max_iter)
+    return f"Jacobi n'a pas convergé après {max_iter} itérations"
 
 # show(jacobi(m2))
