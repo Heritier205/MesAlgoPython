@@ -1,5 +1,5 @@
-from AlgoNum.Linear_sys_Solver.Gauss import reduct
-from AlgoNum.Linear_sys_Solver.Operations import est_carre, show, pivot_partiel
+from AlgoNum.Linear_sys_Solver.Directe.Gauss import reduct
+from AlgoNum.Linear_sys_Solver.Operations import est_carre, pivot_partiel
 
 m2 = [
     [0, 2, 9, 1],
