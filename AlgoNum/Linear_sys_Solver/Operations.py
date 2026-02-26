@@ -9,14 +9,20 @@
 #  Sorties   : Oui
 #
 #  Remarques : on pouvait utiliser la bibliothèque numpy mais ce serait bcp trop facile et pas tout à fait portable
+#              Les fonctions de ce fichier sont un peu liée les uns aux autres donc il faut un certain ordre pour pouvoir facilement comprendre
+#              Un minimum de connaissance sur l'utilisation des tableaux est requise (je dis ça je ne dis rien)
 # ============================================================
 
-m1 = ([1, 2, 3],
-      [4, 5, 6],
-      [7, 8, 9])
 
-m2 = ([1, 2, 3],
-      [7, 8, 9])
+# matrice de test sur les fonctions (j'ai jugé bon de les laisser)
+m1 = [[1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]]
+
+m2 = [[1, 2, 3],
+      [7, 8, 9]]
+
+
 
 def taille(m):
     return len(m), len(m[0])
