@@ -84,31 +84,3 @@ def det(m):
 
 def egal(m1, m2):
     return m1 == m2
-
-def tt_inconnue(liste):
-    for i in liste[:-1]:
-        if i == 0 :
-            return False
-    return True
-
-def pivot_partiel(mat,niveau):
-    max_coef = niveau
-    for i in range(niveau, len(mat)):
-        if abs(mat[i][niveau]) > abs(mat[max_coef][niveau]) and tt_inconnue(mat[i][niveau:]):
-            max_coef = i
-            # print(f"Le maxCoef = {i}")
-    mat[niveau], mat[max_coef] = mat[max_coef], mat[niveau]
-    return mat
-
-def symetrique(mat):
-    n = len(mat)
-    for i in range(n):
-        for j in range(n):
-            if mat[i][j] != mat[j][i]:
-                return False
-    return True
-
-def show(mat):
-    for row in mat:
-        print(row)
-    print('\n')
