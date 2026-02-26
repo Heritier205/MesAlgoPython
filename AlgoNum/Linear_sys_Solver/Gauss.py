@@ -16,6 +16,11 @@ m3 = [
     [12, 37, -43, 2],
     [-16, -43, 98, 3]
 ]
+m4 = [
+    [10, -1,  2,  6],
+    [-1, 11, -1, 25],
+    [ 2, -1, 10, -11]
+]
 
 
 def gauss(mat):
@@ -48,7 +53,7 @@ def reduct(mat):
         mat = [row[:-2]+row[-1:] for row in mat]
     return list(reversed(s_mat))
 
-# show(gauss(m3))
+# show(gauss(m4))
 
 
 
