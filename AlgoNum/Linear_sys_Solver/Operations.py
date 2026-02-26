@@ -100,6 +100,14 @@ def pivot_partiel(mat,niveau):
     mat[niveau], mat[max_coef] = mat[max_coef], mat[niveau]
     return mat
 
+def symetrique(mat):
+    n = len(mat)
+    for i in range(n):
+        for j in range(n):
+            if mat[i][j] != mat[j][i]:
+                return False
+    return True
+
 def show(mat):
     for row in mat:
         print(row)
